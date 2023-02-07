@@ -21,12 +21,12 @@ def essid_parse(pkt):
     pkt = bytearray(pkt)
     flag = pkt[i]
     if flag == 0:
-        leng = pkt[i+1]
-        for j in range(i+2,i+2+leng):
-            essid = essid+chr(pkt[j])
-        if essid[0] == '\u0000':
-            return "This is Hidden API"
-        return essid
+      leng = pkt[i+1]
+      for j in range(i+2,i+2+leng):
+          essid = essid+chr(pkt[j])
+      if essid[0] == '\u0000':
+          return "This is Hidden API"
+      return essid
 
 def print_log(mac, essid, antennaSignal):
   os.system("clear")
