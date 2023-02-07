@@ -3,6 +3,7 @@
 - python 3.9+
 - pcap
 - dpkg
+- binascii
 
 ## usage
 ```
